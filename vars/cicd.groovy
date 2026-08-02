@@ -8,5 +8,5 @@ def buildArtifact()
 }
 def depolyTomcat(jobname,ip,context)
 {
-  sh "scp /var/lib/jenkins/workspace/DeclarativepipelineWithSharedlibraries/server/target/webapp.war ubuntu@{ip}:/var/lib/tomcat10/webapps/${context}.war"
+  sh "scp /var/lib/jenkins/workspace/${jobname}/server/target/webapp.war ubuntu@${ip}:/var/lib/tomcat10/webapps/${context}.war"
 }
