@@ -6,3 +6,7 @@ def buildArtifact()
 {
   sh 'mvn package'
 }
+def depolyTomcat(jobname,ip,context)
+{
+  sh "scp /var/lib/jenkins/workspace/DeclarativepipelineWithSharedlibraries/server/target/webapp.war ubuntu@{ip}:/var/lib/tomcat10/webapps/${context}.war"
+}
