@@ -13,7 +13,7 @@ def deploytomcat(jobname,ip,context)
 }
 def runselenium(jobname)
 {
-  sh "java -jar /var/lib/jenkins/workspace/${jobname}/webapp/testing.jar"
+  sh "java -jar /var/lib/jenkins/workspace/${jobname}/testing.jar"
 }
 def deliverytomcat(jobname,ip,context)
 {
